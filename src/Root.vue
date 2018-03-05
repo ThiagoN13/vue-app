@@ -1,22 +1,27 @@
 <template>
-  <div id="title">
-    <h1>{{ title }}</h1>
-    <navbar></navbar>
-    <router-view></router-view>
+  <div id="root">
+    <el-container>
+      <el-header>
+        <navbar></navbar>
+      </el-header>
+
+      <el-main>
+        <router-view></router-view>
+      </el-main>
+    </el-container>
+
+    <el-footer class="footer">
+      Footer
+    </el-footer>
   </div>
 </template>
 
 <script>
-  import navbar from './components/root/navbar.vue'
+  import navbar from './components/common/navbar.vue'
 
   export default {
     components: {
       navbar
-    },
-    data () {
-      return {
-        title: 'My first app with vue'
-      }
     }
   }
 </script>

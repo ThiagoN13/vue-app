@@ -1,14 +1,16 @@
+// CSS
+import './assets/css/style.css'
+
 import Vue from 'vue'
-import App from './Root.vue'
+import Root from './Root.vue'
 import router from './router'
-import VueRouter from 'vue-router'
 import ElementUI from 'element-ui'
+import locale from 'element-ui/lib/locale/lang/pt-br'
 
-Vue.use(ElementUI)
-
-Vue.use(VueRouter)
+Vue.use(ElementUI, { locale })
 
 new Vue({
   router,
-  render: h => h(App)
+  render: h => h(Root)
 }).$mount('#app')
+
