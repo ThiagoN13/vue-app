@@ -4,7 +4,7 @@
      Inicio
     </el-menu-item>
     <el-submenu index="2">
-      <template slot="title">Workspace</template>
+      <template slot="title">Estatisticas</template>
       <el-menu-item index="2-1">item one</el-menu-item>
       <el-menu-item index="2-2">item two</el-menu-item>
       <el-menu-item index="2-3">item three</el-menu-item>
