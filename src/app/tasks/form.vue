@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-col :xs="{span: 24}" :md="{span: 10, push:8}" :lg="{span: 6, push:8}">
+    <el-col :xs="{span: 24}" :md="{span: 10, push:8}" :lg="{span: 7, push:8}">
       <el-form :model="task">
         <el-form-item label="Nome da tarefa">
           <el-input v-model="task.name" placeholder="Nome da tarefa"></el-input>

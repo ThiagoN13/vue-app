@@ -1,5 +1,6 @@
 // CSS
 import './assets/css/style.css'
+import './assets/css/reset.css'
 
 import Vue from 'vue'
 import Root from './Root.vue'

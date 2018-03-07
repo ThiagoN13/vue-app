@@ -1,13 +1,14 @@
 import home from './home/home.vue'
 import tasks from './tasks/tasks.vue'
 import homeTasks from './tasks/home.vue'
+import board from './board/board.vue'
 import form from './tasks/form.vue'
 
 const app = {
   ROUTES: [
     { path: '/home', name: 'home', component: home },
+    { path: '/board', name: 'board', component: board },
     {
-      name: 'tasks',
       path: '/tasks',
       component: tasks,
       children: [
