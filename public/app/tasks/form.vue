@@ -53,11 +53,20 @@
     },
     methods: {
       onSubmit() {
-        this.$notify({
-          title: 'Success',
-          message: 'This is a success message',
-          type: 'success'
-        })
+        this.$http.get('http://localhost:3000/api/task', this.task)
+          .then(response => {
+            this.$notify({
+              title: 'Success',
+              message: 'This is a success message',
+              type: 'success'
+            })
+
+            this.$router.push('/tasks')
+          })
+          .catch(error => {
+            console.error(error)
+          })
+        
       }
     }
   }

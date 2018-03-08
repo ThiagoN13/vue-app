@@ -13,7 +13,6 @@
         Maecenas feugiat, odio id tincidunt pretium, sapien nisl accumsan felis, ut tristique ligula ipsum nec nunc. 
         Suspendisse aliquet, mauris vel convallis laoreet, justo augue fringilla nisl, id luctus elit odio et orci. 
         Sed dictum, justo consequat sodales tempor, odio felis porttitor purus, vel maximus neque arcu at ex. 
-        Nam interdum purus nec ex sagittis tempus. Sed placerat nulla quis libero fringilla, ut porttitor ante placerat.
       </p>
       <p>
         In ut odio ac neque ullamcorper efficitur. Aliquam ultrices velit ac nulla ultrices blandit. 

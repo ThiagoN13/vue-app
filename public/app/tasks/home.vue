@@ -5,7 +5,7 @@
       <el-col :span='18'>
         <el-button type='success' size='mini' icon='el-icon-check' @click="changeStatus({ set: true })" :disabled="selecteds.length <= 0">Marcar como feito</el-button>
 
-        <router-link to="tasks/form">
+        <router-link to="form">
           <el-button type='primary' size='mini' icon='el-icon-plus'>Adicionar tarefas</el-button>
         </router-link>
 
@@ -75,7 +75,7 @@
       :page-sizes='[5, 10, 20, 200]'
       :page-size='5'
       layout='total, sizes, prev, pager, next, jumper'
-      :total='tasks.length'>
+      :total='lengthTable'>
     </el-pagination>
   </div>
 </template>
@@ -86,6 +86,7 @@
 
   let currentPage = 1
   let itemsPerPage = 5
+  let lengthTable = tasks.length
 
   function deleteSelecteds () {
     const idsSelecteds = this.selecteds.map(selected => selected._id)
@@ -107,11 +108,16 @@
     
   }
 
-  function paginationFilter (tasks = []) {
+  /**
+   * @function paginationFilter
+   * @param {Array<Object>} tasks
+   * @return {Array<Object>}
+   */
+  function paginationFilter (tasksList = []) {
     const init = itemsPerPage * currentPage - itemsPerPage
     const end = init + itemsPerPage
 
-    return tasks.slice(init, end)
+    return tasksList.slice(init, end)
   }
 
   function handleSizeChange (val) {
@@ -148,10 +154,21 @@
     })
   }
 
-export default {
+  function getData () {
+    this.$http.get('http://localhost:3000/api/task', { headers: { } })
+      .then(response => {
+        console.log(  )
+      })
+      .catch(error => {
+        console.error(error)
+      })
+  }
+
+  export default {
     name: 'home',
-    data() {
+    data () {
       return {
+        lengthTable,
         itemsPerPage: 5,
         selecteds: [],
         search: '',
@@ -165,13 +182,16 @@ export default {
       setSelecteds,
       paginationFilter,
       changeStatus,
+      getData,
       deleteSelecteds
     },
     computed: {
       filteredList () {
-        this.dataTable = this.tasks.filter(task => {
-          return task.name.toLowerCase().includes(this.search.toLowerCase())
-        })
+        // this.dataTable = this.tasks.filter(task => {
+        //   return task.name.toLowerCase().includes(this.search.toLowerCase())
+        // })
+
+        // this.lengthTable = this.dataTable.length
       }
     }
   }

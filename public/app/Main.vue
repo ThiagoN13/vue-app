@@ -17,9 +17,10 @@
 </template>
 
 <script>
-  import navbar from './components/common/navbar.vue'
+  import navbar from '../components/common/navbar.vue'
 
   export default {
+    name: 'Main',
     components: {
       navbar
     }

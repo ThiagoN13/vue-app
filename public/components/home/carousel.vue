@@ -27,12 +27,12 @@
     data () {
       return {
         photos: [
-          './src/assets/img/1.png',
-          './src/assets/img/2.jpg',
-          './src/assets/img/3.jpg',
-          './src/assets/img/4.jpeg',
-          './src/assets/img/5.jpg',
-          './src/assets/img/6.jpg'
+          './public/assets/img/1.png',
+          './public/assets/img/2.jpg',
+          './public/assets/img/3.jpg',
+          './public/assets/img/4.jpeg',
+          './public/assets/img/5.jpg',
+          './public/assets/img/6.jpg'
         ]
       }
     }
